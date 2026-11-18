@@ -72,6 +72,7 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--balance", choices=["sampler", "loss", "none"], default="sampler",
                    help="how to handle the 10x class imbalance (default: sampler)")
     p.add_argument("--no-clahe", action="store_true", help="disable CLAHE (ablation)")
+    p.add_argument("--fixed-augment", action="store_true", help="reuse each image's augmentation every epoch (upstream baseline)")
     p.add_argument("--workers", type=int, default=0,
                    help="dataloader workers; 0 is fastest here since data is cached")
     p.add_argument("--patience", type=int, default=6, help="early-stopping patience")
@@ -162,7 +163,7 @@ def cmd_train(args) -> int:
         img_size=args.img_size, batch_size=args.batch_size, epochs=args.epochs,
         lr=args.lr, max_lr=args.max_lr, dropout=args.dropout,
         width_mult=args.width_mult, balance=args.balance,
-        use_clahe=not args.no_clahe, seed=args.seed, workers=args.workers,
+        use_clahe=not args.no_clahe, seed=args.seed, workers=args.workers, vary_augment=not args.fixed_augment,
         patience=args.patience, max_minutes=args.max_minutes,
     )
     run_training(cfg, args.data_dir, args.out, args.results,

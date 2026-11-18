@@ -25,3 +25,11 @@ Thumbs.db
 
 # Ablation runs: keep the metrics, not the 1.2 MB checkpoints each produces.
 ablations/**/*.pt
+
+# Local connection helpers and screenshots are never part of a public repo.
+read_login_ocr.ps1
+authorize_server_key.ps1
+secure_connect_prompt.py
+temp_ssh_askpass.exe
+gui_qa_temp.py
+demo_qa.png

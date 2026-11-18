@@ -54,6 +54,8 @@ class GTSRBDataset(Dataset):
         self.mean = norm_mean if norm_mean is not None else [0.5, 0.5, 0.5]
         self.std = norm_std if norm_std is not None else [0.5, 0.5, 0.5]
         self.seed = seed
+        # Shared memory keeps epoch updates visible to persistent DataLoader workers.
+        self._epoch = torch.zeros(1, dtype=torch.int64).share_memory_()
 
         self.labels = self.df["class_id"].to_numpy(dtype=np.int64)
         self.paths = self.df["path"].tolist()
@@ -97,13 +99,18 @@ class GTSRBDataset(Dataset):
     def __len__(self) -> int:
         return len(self.df)
 
+    def set_epoch(self, epoch: int) -> None:
+        if epoch < 0:
+            raise ValueError('epoch must be non-negative')
+        self._epoch[0] = epoch
+
     def __getitem__(self, idx: int):
         img = self.cache[idx] if self.cache is not None else self._load_one(idx)
 
         if self.train:
-            # Seeded per (epoch-independent) index so runs are reproducible even
-            # when workers > 0, where a shared global RNG would not be.
-            rng = np.random.default_rng((self.seed * 1_000_003 + idx) % (2**32))
+            # Reproducible across workers and runs, but distinct across epochs.
+            seed = (self.seed * 1_000_003 + idx + int(self._epoch[0]) * 97_409) % (2**32)
+            rng = np.random.default_rng(seed)
             img = augment(img, rng)
 
         return to_tensor(img, self.mean, self.std), int(self.labels[idx])

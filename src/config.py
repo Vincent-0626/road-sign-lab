@@ -90,6 +90,7 @@ class Config:
     balance: str = "sampler"  # sampler | loss | none
     use_clahe: bool = True
     seed: int = 42
+    vary_augment: bool = True
     workers: int = 0
     patience: int = 6
     max_minutes: float = 30.0

@@ -50,7 +50,7 @@ def run_training(cfg: Config, data_dir: Path, out_dir: Path, results_dir: Path,
 
     print(f"[train] device={device} threads={threads} seed={cfg.seed}")
     print(f"[train] img_size={cfg.img_size} batch={cfg.batch_size} epochs={cfg.epochs} "
-          f"balance={cfg.balance} clahe={cfg.use_clahe}")
+          f"balance={cfg.balance} clahe={cfg.use_clahe} vary_augment={cfg.vary_augment}")
 
     print("[train] loading data (preprocessing is cached in RAM up front)")
     with Timer() as t_load:
@@ -111,6 +111,7 @@ def run_training(cfg: Config, data_dir: Path, out_dir: Path, results_dir: Path,
 
     for epoch in range(start_epoch, cfg.epochs + 1):
         t_epoch = time.perf_counter()
+        train_ds.set_epoch(epoch - 1 if cfg.vary_augment else 0)
 
         train_loss, train_acc = train_one_epoch(
             model, train_loader, criterion, optimizer, device,

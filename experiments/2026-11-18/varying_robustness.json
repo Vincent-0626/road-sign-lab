@@ -1,0 +1,333 @@
+{
+  "checkpoint": "/root/cv-traffic-sign/runs/varying/checkpoints/best.pt",
+  "split": "official_test",
+  "n_images": 12630,
+  "conditions": {
+    "clean": {
+      "brightness": 1.0,
+      "blur": 0,
+      "occlusion": 0.0
+    },
+    "dark": {
+      "brightness": 0.45,
+      "blur": 0,
+      "occlusion": 0.0
+    },
+    "blur": {
+      "brightness": 1.0,
+      "blur": 5,
+      "occlusion": 0.0
+    },
+    "occlusion": {
+      "brightness": 1.0,
+      "blur": 0,
+      "occlusion": 0.3
+    }
+  },
+  "metrics": {
+    "clean": {
+      "accuracy": 0.9750593824228029,
+      "macro_f1": 0.965594411420306,
+      "most_confused": [
+        {
+          "true_id": 8,
+          "true": "Speed limit (120km/h)",
+          "pred_id": 5,
+          "pred": "Speed limit (80km/h)",
+          "count": 29
+        },
+        {
+          "true_id": 3,
+          "true": "Speed limit (60km/h)",
+          "pred_id": 5,
+          "pred": "Speed limit (80km/h)",
+          "count": 21
+        },
+        {
+          "true_id": 21,
+          "true": "Double curve",
+          "pred_id": 19,
+          "pred": "Dangerous curve to the left",
+          "count": 18
+        },
+        {
+          "true_id": 9,
+          "true": "No passing",
+          "pred_id": 42,
+          "pred": "End of no passing by vehicles over 3.5t",
+          "count": 15
+        },
+        {
+          "true_id": 22,
+          "true": "Bumpy road",
+          "pred_id": 25,
+          "pred": "Road work",
+          "count": 15
+        },
+        {
+          "true_id": 6,
+          "true": "End of speed limit (80km/h)",
+          "pred_id": 42,
+          "pred": "End of no passing by vehicles over 3.5t",
+          "count": 14
+        },
+        {
+          "true_id": 38,
+          "true": "Keep right",
+          "pred_id": 40,
+          "pred": "Roundabout mandatory",
+          "count": 14
+        },
+        {
+          "true_id": 2,
+          "true": "Speed limit (50km/h)",
+          "pred_id": 5,
+          "pred": "Speed limit (80km/h)",
+          "count": 13
+        },
+        {
+          "true_id": 18,
+          "true": "General caution",
+          "pred_id": 26,
+          "pred": "Traffic signals",
+          "count": 11
+        },
+        {
+          "true_id": 17,
+          "true": "No entry",
+          "pred_id": 7,
+          "pred": "Speed limit (100km/h)",
+          "count": 9
+        }
+      ]
+    },
+    "dark": {
+      "accuracy": 0.9406175771971497,
+      "macro_f1": 0.9216475869079996,
+      "most_confused": [
+        {
+          "true_id": 2,
+          "true": "Speed limit (50km/h)",
+          "pred_id": 5,
+          "pred": "Speed limit (80km/h)",
+          "count": 101
+        },
+        {
+          "true_id": 35,
+          "true": "Ahead only",
+          "pred_id": 33,
+          "pred": "Turn right ahead",
+          "count": 44
+        },
+        {
+          "true_id": 6,
+          "true": "End of speed limit (80km/h)",
+          "pred_id": 42,
+          "pred": "End of no passing by vehicles over 3.5t",
+          "count": 36
+        },
+        {
+          "true_id": 23,
+          "true": "Slippery road",
+          "pred_id": 19,
+          "pred": "Dangerous curve to the left",
+          "count": 31
+        },
+        {
+          "true_id": 3,
+          "true": "Speed limit (60km/h)",
+          "pred_id": 5,
+          "pred": "Speed limit (80km/h)",
+          "count": 29
+        },
+        {
+          "true_id": 39,
+          "true": "Keep left",
+          "pred_id": 19,
+          "pred": "Dangerous curve to the left",
+          "count": 29
+        },
+        {
+          "true_id": 35,
+          "true": "Ahead only",
+          "pred_id": 19,
+          "pred": "Dangerous curve to the left",
+          "count": 26
+        },
+        {
+          "true_id": 8,
+          "true": "Speed limit (120km/h)",
+          "pred_id": 7,
+          "pred": "Speed limit (100km/h)",
+          "count": 24
+        },
+        {
+          "true_id": 21,
+          "true": "Double curve",
+          "pred_id": 19,
+          "pred": "Dangerous curve to the left",
+          "count": 22
+        },
+        {
+          "true_id": 8,
+          "true": "Speed limit (120km/h)",
+          "pred_id": 5,
+          "pred": "Speed limit (80km/h)",
+          "count": 20
+        }
+      ]
+    },
+    "blur": {
+      "accuracy": 0.9281868566904197,
+      "macro_f1": 0.9131756933365136,
+      "most_confused": [
+        {
+          "true_id": 3,
+          "true": "Speed limit (60km/h)",
+          "pred_id": 5,
+          "pred": "Speed limit (80km/h)",
+          "count": 76
+        },
+        {
+          "true_id": 6,
+          "true": "End of speed limit (80km/h)",
+          "pred_id": 42,
+          "pred": "End of no passing by vehicles over 3.5t",
+          "count": 40
+        },
+        {
+          "true_id": 5,
+          "true": "Speed limit (80km/h)",
+          "pred_id": 10,
+          "pred": "No passing for vehicles over 3.5t",
+          "count": 32
+        },
+        {
+          "true_id": 1,
+          "true": "Speed limit (30km/h)",
+          "pred_id": 4,
+          "pred": "Speed limit (70km/h)",
+          "count": 28
+        },
+        {
+          "true_id": 3,
+          "true": "Speed limit (60km/h)",
+          "pred_id": 10,
+          "pred": "No passing for vehicles over 3.5t",
+          "count": 20
+        },
+        {
+          "true_id": 21,
+          "true": "Double curve",
+          "pred_id": 19,
+          "pred": "Dangerous curve to the left",
+          "count": 20
+        },
+        {
+          "true_id": 2,
+          "true": "Speed limit (50km/h)",
+          "pred_id": 10,
+          "pred": "No passing for vehicles over 3.5t",
+          "count": 19
+        },
+        {
+          "true_id": 8,
+          "true": "Speed limit (120km/h)",
+          "pred_id": 5,
+          "pred": "Speed limit (80km/h)",
+          "count": 18
+        },
+        {
+          "true_id": 18,
+          "true": "General caution",
+          "pred_id": 26,
+          "pred": "Traffic signals",
+          "count": 17
+        },
+        {
+          "true_id": 22,
+          "true": "Bumpy road",
+          "pred_id": 25,
+          "pred": "Road work",
+          "count": 17
+        }
+      ]
+    },
+    "occlusion": {
+      "accuracy": 0.9596199524940617,
+      "macro_f1": 0.9507462806017226,
+      "most_confused": [
+        {
+          "true_id": 2,
+          "true": "Speed limit (50km/h)",
+          "pred_id": 1,
+          "pred": "Speed limit (30km/h)",
+          "count": 62
+        },
+        {
+          "true_id": 2,
+          "true": "Speed limit (50km/h)",
+          "pred_id": 5,
+          "pred": "Speed limit (80km/h)",
+          "count": 48
+        },
+        {
+          "true_id": 6,
+          "true": "End of speed limit (80km/h)",
+          "pred_id": 42,
+          "pred": "End of no passing by vehicles over 3.5t",
+          "count": 21
+        },
+        {
+          "true_id": 21,
+          "true": "Double curve",
+          "pred_id": 19,
+          "pred": "Dangerous curve to the left",
+          "count": 20
+        },
+        {
+          "true_id": 3,
+          "true": "Speed limit (60km/h)",
+          "pred_id": 5,
+          "pred": "Speed limit (80km/h)",
+          "count": 19
+        },
+        {
+          "true_id": 9,
+          "true": "No passing",
+          "pred_id": 42,
+          "pred": "End of no passing by vehicles over 3.5t",
+          "count": 18
+        },
+        {
+          "true_id": 1,
+          "true": "Speed limit (30km/h)",
+          "pred_id": 5,
+          "pred": "Speed limit (80km/h)",
+          "count": 16
+        },
+        {
+          "true_id": 18,
+          "true": "General caution",
+          "pred_id": 26,
+          "pred": "Traffic signals",
+          "count": 15
+        },
+        {
+          "true_id": 22,
+          "true": "Bumpy road",
+          "pred_id": 25,
+          "pred": "Road work",
+          "count": 13
+        },
+        {
+          "true_id": 8,
+          "true": "Speed limit (120km/h)",
+          "pred_id": 7,
+          "pred": "Speed limit (100km/h)",
+          "count": 12
+        }
+      ]
+    }
+  }
+}

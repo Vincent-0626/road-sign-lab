@@ -1,0 +1,354 @@
+{
+  "source": "https://hf-mirror.com/datasets/Yuvrajg2107/pranavx-gtsrb-reliability",
+  "roi": "original GTSRB annotation",
+  "train": 31379,
+  "val": 7830,
+  "test": 12630,
+  "track_overlap": 0,
+  "per_class": [
+    {
+      "class_id": 0,
+      "class_name": "Speed limit (20km/h)",
+      "n_tracks": 7,
+      "n_val_tracks": 1,
+      "n_train_images": 180,
+      "n_val_images": 30
+    },
+    {
+      "class_id": 1,
+      "class_name": "Speed limit (30km/h)",
+      "n_tracks": 74,
+      "n_val_tracks": 15,
+      "n_train_images": 1770,
+      "n_val_images": 450
+    },
+    {
+      "class_id": 2,
+      "class_name": "Speed limit (50km/h)",
+      "n_tracks": 75,
+      "n_val_tracks": 15,
+      "n_train_images": 1800,
+      "n_val_images": 450
+    },
+    {
+      "class_id": 3,
+      "class_name": "Speed limit (60km/h)",
+      "n_tracks": 47,
+      "n_val_tracks": 9,
+      "n_train_images": 1140,
+      "n_val_images": 270
+    },
+    {
+      "class_id": 4,
+      "class_name": "Speed limit (70km/h)",
+      "n_tracks": 66,
+      "n_val_tracks": 13,
+      "n_train_images": 1590,
+      "n_val_images": 390
+    },
+    {
+      "class_id": 5,
+      "class_name": "Speed limit (80km/h)",
+      "n_tracks": 62,
+      "n_val_tracks": 12,
+      "n_train_images": 1500,
+      "n_val_images": 360
+    },
+    {
+      "class_id": 6,
+      "class_name": "End of speed limit (80km/h)",
+      "n_tracks": 14,
+      "n_val_tracks": 3,
+      "n_train_images": 330,
+      "n_val_images": 90
+    },
+    {
+      "class_id": 7,
+      "class_name": "Speed limit (100km/h)",
+      "n_tracks": 48,
+      "n_val_tracks": 10,
+      "n_train_images": 1140,
+      "n_val_images": 300
+    },
+    {
+      "class_id": 8,
+      "class_name": "Speed limit (120km/h)",
+      "n_tracks": 47,
+      "n_val_tracks": 9,
+      "n_train_images": 1140,
+      "n_val_images": 270
+    },
+    {
+      "class_id": 9,
+      "class_name": "No passing",
+      "n_tracks": 49,
+      "n_val_tracks": 10,
+      "n_train_images": 1170,
+      "n_val_images": 300
+    },
+    {
+      "class_id": 10,
+      "class_name": "No passing for vehicles over 3.5t",
+      "n_tracks": 67,
+      "n_val_tracks": 13,
+      "n_train_images": 1620,
+      "n_val_images": 390
+    },
+    {
+      "class_id": 11,
+      "class_name": "Right-of-way at next intersection",
+      "n_tracks": 44,
+      "n_val_tracks": 9,
+      "n_train_images": 1050,
+      "n_val_images": 270
+    },
+    {
+      "class_id": 12,
+      "class_name": "Priority road",
+      "n_tracks": 70,
+      "n_val_tracks": 14,
+      "n_train_images": 1680,
+      "n_val_images": 420
+    },
+    {
+      "class_id": 13,
+      "class_name": "Yield",
+      "n_tracks": 72,
+      "n_val_tracks": 14,
+      "n_train_images": 1740,
+      "n_val_images": 420
+    },
+    {
+      "class_id": 14,
+      "class_name": "Stop",
+      "n_tracks": 26,
+      "n_val_tracks": 5,
+      "n_train_images": 630,
+      "n_val_images": 150
+    },
+    {
+      "class_id": 15,
+      "class_name": "No vehicles",
+      "n_tracks": 21,
+      "n_val_tracks": 4,
+      "n_train_images": 510,
+      "n_val_images": 120
+    },
+    {
+      "class_id": 16,
+      "class_name": "Vehicles over 3.5t prohibited",
+      "n_tracks": 14,
+      "n_val_tracks": 3,
+      "n_train_images": 330,
+      "n_val_images": 90
+    },
+    {
+      "class_id": 17,
+      "class_name": "No entry",
+      "n_tracks": 37,
+      "n_val_tracks": 7,
+      "n_train_images": 900,
+      "n_val_images": 210
+    },
+    {
+      "class_id": 18,
+      "class_name": "General caution",
+      "n_tracks": 40,
+      "n_val_tracks": 8,
+      "n_train_images": 960,
+      "n_val_images": 240
+    },
+    {
+      "class_id": 19,
+      "class_name": "Dangerous curve to the left",
+      "n_tracks": 7,
+      "n_val_tracks": 1,
+      "n_train_images": 180,
+      "n_val_images": 30
+    },
+    {
+      "class_id": 20,
+      "class_name": "Dangerous curve to the right",
+      "n_tracks": 12,
+      "n_val_tracks": 2,
+      "n_train_images": 300,
+      "n_val_images": 60
+    },
+    {
+      "class_id": 21,
+      "class_name": "Double curve",
+      "n_tracks": 11,
+      "n_val_tracks": 2,
+      "n_train_images": 270,
+      "n_val_images": 60
+    },
+    {
+      "class_id": 22,
+      "class_name": "Bumpy road",
+      "n_tracks": 13,
+      "n_val_tracks": 3,
+      "n_train_images": 300,
+      "n_val_images": 90
+    },
+    {
+      "class_id": 23,
+      "class_name": "Slippery road",
+      "n_tracks": 17,
+      "n_val_tracks": 3,
+      "n_train_images": 420,
+      "n_val_images": 90
+    },
+    {
+      "class_id": 24,
+      "class_name": "Road narrows on the right",
+      "n_tracks": 9,
+      "n_val_tracks": 2,
+      "n_train_images": 210,
+      "n_val_images": 60
+    },
+    {
+      "class_id": 25,
+      "class_name": "Road work",
+      "n_tracks": 50,
+      "n_val_tracks": 10,
+      "n_train_images": 1200,
+      "n_val_images": 300
+    },
+    {
+      "class_id": 26,
+      "class_name": "Traffic signals",
+      "n_tracks": 20,
+      "n_val_tracks": 4,
+      "n_train_images": 480,
+      "n_val_images": 120
+    },
+    {
+      "class_id": 27,
+      "class_name": "Pedestrians",
+      "n_tracks": 8,
+      "n_val_tracks": 2,
+      "n_train_images": 180,
+      "n_val_images": 60
+    },
+    {
+      "class_id": 28,
+      "class_name": "Children crossing",
+      "n_tracks": 18,
+      "n_val_tracks": 4,
+      "n_train_images": 420,
+      "n_val_images": 120
+    },
+    {
+      "class_id": 29,
+      "class_name": "Bicycles crossing",
+      "n_tracks": 9,
+      "n_val_tracks": 2,
+      "n_train_images": 210,
+      "n_val_images": 60
+    },
+    {
+      "class_id": 30,
+      "class_name": "Beware of ice/snow",
+      "n_tracks": 15,
+      "n_val_tracks": 3,
+      "n_train_images": 360,
+      "n_val_images": 90
+    },
+    {
+      "class_id": 31,
+      "class_name": "Wild animals crossing",
+      "n_tracks": 26,
+      "n_val_tracks": 5,
+      "n_train_images": 630,
+      "n_val_images": 150
+    },
+    {
+      "class_id": 32,
+      "class_name": "End of all speed and passing limits",
+      "n_tracks": 8,
+      "n_val_tracks": 2,
+      "n_train_images": 180,
+      "n_val_images": 60
+    },
+    {
+      "class_id": 33,
+      "class_name": "Turn right ahead",
+      "n_tracks": 23,
+      "n_val_tracks": 5,
+      "n_train_images": 539,
+      "n_val_images": 150
+    },
+    {
+      "class_id": 34,
+      "class_name": "Turn left ahead",
+      "n_tracks": 14,
+      "n_val_tracks": 3,
+      "n_train_images": 330,
+      "n_val_images": 90
+    },
+    {
+      "class_id": 35,
+      "class_name": "Ahead only",
+      "n_tracks": 40,
+      "n_val_tracks": 8,
+      "n_train_images": 960,
+      "n_val_images": 240
+    },
+    {
+      "class_id": 36,
+      "class_name": "Go straight or right",
+      "n_tracks": 13,
+      "n_val_tracks": 3,
+      "n_train_images": 300,
+      "n_val_images": 90
+    },
+    {
+      "class_id": 37,
+      "class_name": "Go straight or left",
+      "n_tracks": 7,
+      "n_val_tracks": 1,
+      "n_train_images": 180,
+      "n_val_images": 30
+    },
+    {
+      "class_id": 38,
+      "class_name": "Keep right",
+      "n_tracks": 69,
+      "n_val_tracks": 14,
+      "n_train_images": 1650,
+      "n_val_images": 420
+    },
+    {
+      "class_id": 39,
+      "class_name": "Keep left",
+      "n_tracks": 10,
+      "n_val_tracks": 2,
+      "n_train_images": 240,
+      "n_val_images": 60
+    },
+    {
+      "class_id": 40,
+      "class_name": "Roundabout mandatory",
+      "n_tracks": 12,
+      "n_val_tracks": 2,
+      "n_train_images": 300,
+      "n_val_images": 60
+    },
+    {
+      "class_id": 41,
+      "class_name": "End of no passing",
+      "n_tracks": 8,
+      "n_val_tracks": 2,
+      "n_train_images": 180,
+      "n_val_images": 60
+    },
+    {
+      "class_id": 42,
+      "class_name": "End of no passing by vehicles over 3.5t",
+      "n_tracks": 8,
+      "n_val_tracks": 2,
+      "n_train_images": 180,
+      "n_val_images": 60
+    }
+  ]
+}
